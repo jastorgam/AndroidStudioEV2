@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">p2_evaluacion2</string>
+    <string name="producto_form_placeholder">Agregar producto</string>
+    <string name="producto_form_add">Agregar</string>
+    <string name="settings">Configuración</string>
+    <string name="back">Atras</string>
+    <string name="home_tittle">Lista de compras</string>
+    <string name="txt_logo">Carrito</string>
+    <string name="delete_product">Borrar Producto</string>
+    <string name="settings_tittle">Configuracion</string>
+    <string name="settings_order">Ordenar alfabéticamente</string>
+    <string name="settings_sort">Mostrar primero items por comprar</string>
+    <string name="product_list_delete_tooltip">Eliminar Producto</string>
+</resources>

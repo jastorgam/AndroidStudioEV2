@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">p2_evaluacion2</string>
+    <string name="producto_form_add">Add</string>
+    <string name="producto_form_placeholder">Add product</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="home_tittle">Shopping List</string>
+    <string name="txt_logo">Shopping Cart</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="settings_tittle">Configuration</string>
+    <string name="settings_order">Order Alphabetically</string>
+    <string name="settings_sort">Show items to buy first</string>
+    <string name="product_list_delete_tooltip">Eliminar Producto</string>
+</resources>
