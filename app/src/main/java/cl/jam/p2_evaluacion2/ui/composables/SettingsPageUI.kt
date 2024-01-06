@@ -36,7 +36,6 @@ fun SettingsPageUI(
     onBackButtonClicked: () -> Unit = {}
 ) {
     val context = LocalContext.current
-    val sharedPreferences = context.getSharedPreferences("preferences", Context.MODE_PRIVATE)
     val txtSettingsTitle = context.getString(R.string.settings_tittle)
     val txtSettingsOrder = context.getString(R.string.settings_order)
     val txtSettingsSort = context.getString(R.string.settings_sort)

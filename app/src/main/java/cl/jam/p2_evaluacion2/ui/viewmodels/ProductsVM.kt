@@ -19,13 +19,27 @@ class ProductsVM() : ViewModel() {
 
     private val _productsRepository: ProductsRepository = ProductsRepository()
     val uiState: StateFlow<ProductsUIState> = _productsRepository.product
+
     private var orderAlpha = mutableStateOf(false)
     private var orderFirst = mutableStateOf(false)
-    private var job: Job? = null
+
     private lateinit var sharedPreferences: SharedPreferences
+
+    private var job: Job? = null
 
     init {
         getProducts()
+    }
+
+    /***
+     * Inicializo el sharedPreferences dentro del primer composable cargado
+     * para poder tener acceso a las preferencias. Ya que el SharedPreferences solo se puede
+     * pasar desde un composable y no desde el viewModel.
+     */
+    fun initSharedPreferences(sharedPreferences: SharedPreferences) {
+        this.sharedPreferences = sharedPreferences
+        getOrderAlpha()
+        getOrderFirst()
     }
 
     fun getOrderAlpha(): Boolean {
@@ -105,9 +119,5 @@ class ProductsVM() : ViewModel() {
         }
     }
 
-    fun initSharedPreferences(sharedPreferences: SharedPreferences) {
-        this.sharedPreferences = sharedPreferences
-        getOrderAlpha()
-        getOrderFirst()
-    }
+
 }

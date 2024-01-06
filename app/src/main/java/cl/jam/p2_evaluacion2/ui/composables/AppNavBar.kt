@@ -1,9 +1,6 @@
 package cl.jam.p2_evaluacion2.ui.composables
 
-import android.content.Context
-import android.util.Log
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -12,23 +9,27 @@ import cl.jam.p2_evaluacion2.ui.viewmodels.ProductsVM
 
 @Composable
 fun AppNavBar(
-    vm: ProductsVM,
+    productsViewModel: ProductsVM,
     navController: NavHostController = rememberNavController()
 ) {
+    /* Aca le paso el vm a las diferentes paginas para que no se pierdan los valores
+    almacenados al inicio de la app.
+     */
+
     NavHost(
         navController = navController,
         startDestination = "home"
     ) {
         composable("home") {
             HomePageUI(
-                vm,
+                productsViewModel,
                 onButtonSettingsClicked = { navController.navigate("settings") }
             )
 
         }
         composable("settings") {
             SettingsPageUI(
-                vm,
+                productsViewModel,
                 onBackButtonClicked = { navController.navigate("home") }
             )
         }
